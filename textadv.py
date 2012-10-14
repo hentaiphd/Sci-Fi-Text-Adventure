@@ -1,4 +1,5 @@
 #coding=utf-8
+import time
 Room_1 = "The star's hydrogen hiccups blot your vision-"
 List_1 = ['look away','avert eyes','shut eyes','close eyes','rub eyes','look down','look up']
 Room_2 = "an abrupt desire: wandering the flaming hedges \n despite the burn, the melting ship. \n It’s on autopilot, step away, \n"
@@ -24,69 +25,31 @@ Room_12 = "The technetium passes slowly out of sight. The heat remains- \n your 
 Room_13 = "end"
 prompt = ">"
 
-print Room_1
-while True:
-	command_1 = raw_input(prompt)
-	if command_1 in List_1:
-		print(Room_2)
-	else:
-		command_1 = raw_input(prompt)
-		print("What does that mean?") 
-		break
+def do_room(room, answers):
+	print room 
+	while True:
+		input = raw_input(prompt)
+		if input not in answers:
+			print("What does that mean?")
+		elif input in answers:
+			break
 
-
-command_2 = raw_input(prompt)
-if command_2 in List_2:
-	print(Room_3)
-else:
-	print("What does that mean?")
-
-command_3 = raw_input(prompt)
-if command_3 in List_3:
-	print(Room_4)
-else:
-	print("What does that mean?")
-
-command_4 = raw_input(prompt)
-if command_4 in List_4:
-	print(Room_5)
-else:
-	print("What does that mean?")
-
-command_5 = raw_input(prompt)
-if command_5 in List_5:
-	print(Room_6)
-else:
-	print("What does that mean?")
-
-command_6 = raw_input(prompt)
-if command_6 in List_6:
-	print(Room_7)
-else:
-	print("What does that mean?")
-
-command_7 = raw_input(prompt)
-if command_7 in List_7:
-	print(Room_8)
-else:
-	print("What does that mean?")
-
-	command_8 = raw_input(prompt)
-if command_8 in List_8:
-	print(Room_9)
-else:
-	print("What does that mean?")
-
-	command_9 = raw_input(prompt)
-if command_9 in List_9:
-	print(Room_10)
-else:
-	print("What does that mean?")
+do_room(Room_1, List_1)
+do_room(Room_2, List_2)
+do_room(Room_3, List_3)
+do_room(Room_4, List_4)
+do_room(Room_5, List_5)
+do_room(Room_6, List_6)
+do_room(Room_7, List_7)
+do_room(Room_8, List_8)
+do_room(Room_9, List_9)
+do_room(Room_10, List_10)
 
 print Room_11 
-time.sleep(10)
+time.sleep(5)
 print Room_12 
-time.sleep(10)
-print Room_13
+time.sleep(5)
+print "\n \n" + Room_13
+
 
 
